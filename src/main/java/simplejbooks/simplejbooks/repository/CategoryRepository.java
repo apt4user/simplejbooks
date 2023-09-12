@@ -1,5 +1,11 @@
 package simplejbooks.simplejbooks.repository;
 
-public class CategoryRepository {
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import simplejbooks.simplejbooks.model.CategoryEntity;
+
+@Repository
+public interface CategoryRepository extends CrudRepository<CategoryEntity, Long> {
 
 }
