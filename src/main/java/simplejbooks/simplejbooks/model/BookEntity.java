@@ -27,8 +27,45 @@ public class BookEntity implements Serializable {
 	@Column(name = "book_title")
 	String bookTitle;
 
-	public String getbookTitle() {
+	@Column(name = "book_isbn")
+	String bookIsbn;
+	
+	@Column(name = "book_description")
+	String bookDescription;
+	
+	@Column(name = "book_price")
+	double bookPrice;
+
+	public String getBookTitle() {
 		return bookTitle;
+	}
+
+	public void setBookTitle(String bookTitle) {
+		this.bookTitle = bookTitle;
+	}
+
+	public String getBookIsbn() {
+		return bookIsbn;
+	}
+
+	public void setBookIsbn(String bookIsbn) {
+		this.bookIsbn = bookIsbn;
+	}
+
+	public String getBookDescription() {
+		return bookDescription;
+	}
+
+	public void setBookDescription(String bookDescription) {
+		this.bookDescription = bookDescription;
+	}
+
+	public double getBookPrice() {
+		return bookPrice;
+	}
+
+	public void setBookPrice(double bookPrice) {
+		this.bookPrice = bookPrice;
 	}
 
 }

@@ -29,7 +29,27 @@ public class SubcategoryEntity implements Serializable {
 	@Column(name = "id")
 	Long id;
 	
-	
+	@Column(name = "subcategory_topic")
+	private String subcategoryTopic;
+
+	@Column(name = "subcategory_descirption")
+	private String subcategoryDescription;
+
+	public String getSubcategoryTopic() {
+		return subcategoryTopic;
+	}
+
+	public void setSubcategoryTopic(String subcategoryTopic) {
+		this.subcategoryTopic = subcategoryTopic;
+	}
+
+	public String getSubcategoryDescription() {
+		return subcategoryDescription;
+	}
+
+	public void setSubcategoryDescription(String subcategoryDescription) {
+		this.subcategoryDescription = subcategoryDescription;
+	}
 	
 	
 }
