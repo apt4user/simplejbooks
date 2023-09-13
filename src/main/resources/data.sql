@@ -30,7 +30,7 @@ VALUES
 	('Physik', '3868943633', 'Lehrbuch Physik', 90, 2),
   	('Physik', '3662679353', 'Lehrbuch Physik', 95, 2),
   	('Physikalische Chemie', '3527345507', 'Lehrbuch Physikalische Chemie', 70, 3),
-  	('Organische Chemie', '3868943412', 'Lehrbuch Organische Chemie', 7, 4),
+  	('Organische Chemie', '3868943412', 'Lehrbuch Organische Chemie', 7, 3),
   	('The Algorithm Design Manual', '3030542556', 'Lehrbuch Algorithmen', 80, 4),
     ('Algorithmen', '3486748610','Lehrbuch Algorithmen', 105, 4),
     ('Technik der IP-Netze', '3446462104', 'Lehrbuch Netzwerktechnik', 60, 5),
