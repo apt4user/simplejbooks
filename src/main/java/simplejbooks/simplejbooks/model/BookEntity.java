@@ -17,9 +17,9 @@ import jakarta.persistence.Table;
 @Entity
 public class BookEntity implements Serializable {
 
-	@ManyToMany
+	@ManyToMany(mappedBy = "books")
 	private List<AuthorEntity> authors;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "subcategory_id", nullable = false)
 	private SubcategoryEntity subcategory;
@@ -81,4 +81,11 @@ public class BookEntity implements Serializable {
 		this.bookPrice = bookPrice;
 	}
 
+	public List<AuthorEntity> getAuthors() {
+		return authors;
+	}
+
+	public void setAuthors(List<AuthorEntity> authors) {
+		this.authors = authors;
+	}
 }

@@ -36,4 +36,12 @@ public class AuthorEntity {
 	public void setAuthorName(String authorName) {
 		this.authorName = authorName;
 	}
+	
+	public List<BookEntity> getBooks() {
+		return books;
+	}
+
+	public void setBooks(List<BookEntity> books) {
+		this.books = books;
+	}
 }
