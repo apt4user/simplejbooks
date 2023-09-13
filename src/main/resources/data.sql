@@ -61,7 +61,7 @@ VALUES
   	
   	
   	  	  	  	INSERT INTO 
-	BOOKS_AUTHORS(authors_id, books_id) 
+	AUTHORS_BOOKS(authors_id, books_id) 
 VALUES
   	(1,1),
 	(2,2),
