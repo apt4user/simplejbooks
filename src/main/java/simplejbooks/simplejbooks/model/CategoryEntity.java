@@ -1,7 +1,10 @@
 package simplejbooks.simplejbooks.model;
 
 import java.io.Serializable;
+import java.util.List;
+
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,6 +15,9 @@ import jakarta.persistence.Entity;
 @Entity
 public class CategoryEntity implements Serializable {
 
+	@OneToMany(mappedBy = "category")
+	private List<SubcategoryEntity> subcategories;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
