@@ -16,25 +16,33 @@ import jakarta.persistence.Table;
 public class BookEntity implements Serializable {
 
 	@ManyToOne
-	@JoinColumn(name="subcategory_id", nullable=false)
-	SubcategoryEntity subcategory;
-	
+	@JoinColumn(name = "subcategory_id", nullable = false)
+	private SubcategoryEntity subcategory;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
-	Long id;
+	private Long id;
 
 	@Column(name = "book_title")
-	String bookTitle;
+	private String bookTitle;
 
 	@Column(name = "book_isbn")
-	String bookIsbn;
-	
+	private String bookIsbn;
+
 	@Column(name = "book_description")
-	String bookDescription;
-	
+	private String bookDescription;
+
 	@Column(name = "book_price")
-	double bookPrice;
+	private double bookPrice;
+
+	public SubcategoryEntity getSubcategory() {
+		return subcategory;
+	}
+
+	public void setSubcategory(SubcategoryEntity subcategory) {
+		this.subcategory = subcategory;
+	}
 
 	public String getBookTitle() {
 		return bookTitle;

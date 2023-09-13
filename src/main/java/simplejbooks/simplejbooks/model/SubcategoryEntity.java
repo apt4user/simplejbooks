@@ -16,24 +16,32 @@ import jakarta.persistence.Table;
 @Table(name = "subcategories")
 @Entity
 public class SubcategoryEntity implements Serializable {
-	
+
 	@OneToMany(mappedBy = "subcategory")
 	private List<BookEntity> books;
-	
+
 	@ManyToOne
-	@JoinColumn(name="category_id", nullable=false)
-	CategoryEntity category;
-	
+	@JoinColumn(name = "category_id", nullable = false)
+	private CategoryEntity category;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
-	Long id;
-	
+	private Long id;
+
 	@Column(name = "subcategory_topic")
 	private String subcategoryTopic;
 
 	@Column(name = "subcategory_descirption")
 	private String subcategoryDescription;
+
+	public CategoryEntity getCategory() {
+		return category;
+	}
+
+	public void setCategory(CategoryEntity category) {
+		this.category = category;
+	}
 
 	public String getSubcategoryTopic() {
 		return subcategoryTopic;
@@ -50,6 +58,5 @@ public class SubcategoryEntity implements Serializable {
 	public void setSubcategoryDescription(String subcategoryDescription) {
 		this.subcategoryDescription = subcategoryDescription;
 	}
-	
-	
+
 }
