@@ -1,0 +1,24 @@
+<html>
+<div th:replace="fragments/head :: head"></div>
+
+<body>
+	<div th:replace="fragments/navigation :: nav"></div>
+	<main>
+		<article>
+			<div th:switch="${categories}" class="container my-5">
+				<h2 th:case="null">No record found !!</h2>
+				<div th:case="*">
+					<div class="navbar_items">
+						<tr th:each="category : ${categories}">
+							<a th:href="@{/nonfictions/}">
+								<span th:text="${category.categoryName}"></span>
+							</a>
+						</tr>
+					</div>
+				</div>
+			</div>
+		</article>
+	</main>
+</body>
+
+</html>
