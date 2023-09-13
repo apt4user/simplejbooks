@@ -41,6 +41,10 @@ public class BookEntity implements Serializable {
 	@Column(name = "book_price")
 	private double bookPrice;
 
+	public Long getId() {
+		return id;
+	}
+	
 	public SubcategoryEntity getSubcategory() {
 		return subcategory;
 	}
