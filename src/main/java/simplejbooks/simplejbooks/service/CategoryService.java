@@ -24,6 +24,30 @@ public class CategoryService {
 		}
 	}
 
+	public List<CategoryEntity> getAllNovels() {
+		List<CategoryEntity> categories = (List<CategoryEntity>) repository.findAll();
+		List<CategoryEntity> novelCategories = new ArrayList<CategoryEntity>();
+		for (CategoryEntity category : categories) {
+
+			if (category.getCategoryDesignator().equals("novel")) {
+				novelCategories.add(category);
+			}
+		}
+		return novelCategories;
+	}
+
+	public List<CategoryEntity> getAllNonfictions() {
+		List<CategoryEntity> categories = (List<CategoryEntity>) repository.findAll();
+		List<CategoryEntity> nonfictionCategories = new ArrayList<CategoryEntity>();
+		for (CategoryEntity category : categories) {
+
+			if (category.getCategoryDesignator().equals("nonfiction")) {
+				nonfictionCategories.add(category);
+			}
+		}
+		return nonfictionCategories;
+	}
+
 	public CategoryEntity create(CategoryEntity entity) {
 
 		entity = repository.save(entity);
