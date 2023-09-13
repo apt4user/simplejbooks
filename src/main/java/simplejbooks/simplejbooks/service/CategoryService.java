@@ -28,7 +28,7 @@ public class CategoryService {
 		List<CategoryEntity> categories = (List<CategoryEntity>) repository.findAll();
 		List<CategoryEntity> novelCategories = new ArrayList<CategoryEntity>();
 		for (CategoryEntity category : categories) {
-
+			//Später durch HQL ersetzen
 			if (category.getCategoryDesignator().equals("novel")) {
 				novelCategories.add(category);
 			}
@@ -40,7 +40,7 @@ public class CategoryService {
 		List<CategoryEntity> categories = (List<CategoryEntity>) repository.findAll();
 		List<CategoryEntity> nonfictionCategories = new ArrayList<CategoryEntity>();
 		for (CategoryEntity category : categories) {
-
+			//Später durch HQL ersetzen
 			if (category.getCategoryDesignator().equals("nonfiction")) {
 				nonfictionCategories.add(category);
 			}
