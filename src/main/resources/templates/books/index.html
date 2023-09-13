@@ -1,0 +1,36 @@
+<html>
+<div th:replace="fragments/head :: head"></div>
+
+<body>
+	<div th:replace="fragments/navigation :: nav"></div>
+	<main>
+		<article>
+			<div th:switch="${books}" class="container my-5">
+				<h2 th:case="null">No record found !!</h2>
+				<div th:case="*">
+
+					<tr th:each="book : ${books}">
+						<strong>Buchtitel</strong>
+						<label th:text="${book.bookTitle}"></label>
+						<br>
+						<strong>Autor:</strong>
+						<label th:text="${book.authors[0].authorName}"></label>
+						<br>
+						<strong>ISBN:</strong>
+						<label th:text="${book.bookIsbn}"></label>
+						<br>
+						<strong>Beschreibung</strong>
+						<label th:text="${book.bookDescription}"></label>
+						<br>
+						<strong>Preis</strong>
+						<label th:text="${book.bookPrice}"></label>
+						<br>
+						<br>
+					</tr>
+				</div>
+			</div>
+		</article>
+	</main>
+</body>
+
+</html>
