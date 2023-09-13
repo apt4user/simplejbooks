@@ -23,10 +23,22 @@ public class CategoriesController {
 
 	@RequestMapping(path = "/categories")
 	public String index(Model model) {
-		List<CategoryEntity> list = service.getAllCategories();
+		List<CategoryEntity> categories = service.getAllCategories();
 		model.addAttribute("category", new CategoryEntity());
-		model.addAttribute("categories", list);
+		model.addAttribute("categories", categories);
 		return "/categories/index";
+	}
+	@RequestMapping(path = "/novels")
+	public String indexNovels(Model model) {
+		List<CategoryEntity> novels = service.getAllNovels();
+		model.addAttribute("categories", novels);
+		return "/categories/index_novels";
+	}
+	@RequestMapping(path = "/nonfictions")
+	public String indexNonfictions(Model model) {
+		List<CategoryEntity> nonfictions = service.getAllNonfictions();
+		model.addAttribute("categories", nonfictions);
+		return "/categories/index_nonfictions";
 	}
 
 	@RequestMapping(path = "/categories/new", method = RequestMethod.POST)
