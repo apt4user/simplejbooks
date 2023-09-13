@@ -10,7 +10,7 @@
 				<div th:case="*">
 					<div class="navbar_items">
 						<tr th:each="category : ${categories}">
-							<a th:href="@{/novels/}">
+							<a th:href="@{/subcategories/{id}(id=${category.id})}">
 								<span th:text="${category.categoryName}"></span>
 							</a>
 						</tr>
