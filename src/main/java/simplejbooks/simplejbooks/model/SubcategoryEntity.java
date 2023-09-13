@@ -32,7 +32,7 @@ public class SubcategoryEntity implements Serializable {
 	@Column(name = "subcategory_topic")
 	private String subcategoryTopic;
 
-	@Column(name = "subcategory_descirption")
+	@Column(name = "subcategory_description")
 	private String subcategoryDescription;
 
 	public CategoryEntity getCategory() {
