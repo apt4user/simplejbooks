@@ -35,6 +35,10 @@ public class SubcategoryEntity implements Serializable {
 	@Column(name = "subcategory_description")
 	private String subcategoryDescription;
 
+	public Long getId() {
+		return id;
+	}
+	
 	public CategoryEntity getCategory() {
 		return category;
 	}
