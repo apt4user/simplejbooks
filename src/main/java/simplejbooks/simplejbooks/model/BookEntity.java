@@ -1,6 +1,7 @@
 package simplejbooks.simplejbooks.model;
 
 import java.io.Serializable;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -8,6 +9,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
@@ -15,6 +17,9 @@ import jakarta.persistence.Table;
 @Entity
 public class BookEntity implements Serializable {
 
+	@ManyToMany
+	private List<AuthorEntity> authors;
+	
 	@ManyToOne
 	@JoinColumn(name = "subcategory_id", nullable = false)
 	private SubcategoryEntity subcategory;
