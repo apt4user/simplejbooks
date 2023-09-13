@@ -10,7 +10,7 @@
 				<div th:case="*">
 
 					<tr th:each="book : ${books}">
-						<strong>Buchtitel</strong>
+						<strong>Buchtitel:</strong>
 						<label th:text="${book.bookTitle}"></label>
 						<br>
 						<strong>Autor:</strong>
@@ -19,10 +19,10 @@
 						<strong>ISBN:</strong>
 						<label th:text="${book.bookIsbn}"></label>
 						<br>
-						<strong>Beschreibung</strong>
+						<strong>Beschreibung:</strong>
 						<label th:text="${book.bookDescription}"></label>
 						<br>
-						<strong>Preis</strong>
+						<strong>Preis:</strong>
 						<label th:text="${book.bookPrice}"></label>
 						<br>
 						<br>
