@@ -21,7 +21,7 @@ public class ItemEntity implements Serializable {
 	BookEntity book;
 
 	@ManyToOne
-	@JoinColumn(name = "catrt_id", nullable = false)
+	@JoinColumn(name = "cart_id", nullable = false)
 	CartEntity cart;
 
 	@Id
